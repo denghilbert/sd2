@@ -1,0 +1,15 @@
+
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/cat_color --n_samples 2 --prompt "a white cat" --prompt_i "a cat"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/cat_cute --n_samples 2 --prompt "a cute cat" --prompt_i "a cat"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/cat_fat --n_samples 2 --prompt "a fat cat" --prompt_i "a cat"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/cat_happy --n_samples 2 --prompt "a happy cat" --prompt_i "a cat"
+
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/dog_cute --n_samples 2 --prompt "a cute dog" --prompt_i "a dog"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/dog_fat --n_samples 2 --prompt "a fat dog" --prompt_i "a dog"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/dog_happy --n_samples 2 --prompt "a happy dog" --prompt_i "a dog"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/dog_white --n_samples 2 --prompt "a white dog" --prompt_i "a dog"
+
+
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/dog_cat --n_samples 2 --prompt "a cute cat" --prompt_i "a cute dog"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/cat_house --n_samples 2 --prompt "a cute cat" --prompt_i "a big house"
+python scripts/txt2img_interpolation.py --ckpt ./checkpoints/v2-1_768-ema-pruned.ckpt --config configs/stable-diffusion/v2-inference-v.yaml --H 768 --W 768  --device cuda --outdir ./test/interpolation_clip_space/car_house --n_samples 2 --prompt "a nice car" --prompt_i "a big house"
