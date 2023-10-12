@@ -1,0 +1,211 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+C	streamlit/stableunclip.py	/^        C = VERSION2SPECS[version]["C"]$/;"	v
+H	streamlit/stableunclip.py	/^        H = st.sidebar.number_input("H", value=VERSION2SPECS[version]["H"], min_value=64, max_value=2048)$/;"	v
+PROMPTS_ROOT	streamlit/stableunclip.py	/^PROMPTS_ROOT = "scripts\/prompts\/"$/;"	v
+SAVE_PATH	streamlit/stableunclip.py	/^    SAVE_PATH = os.path.join(SAVE_PATH, version)$/;"	v
+SAVE_PATH	streamlit/stableunclip.py	/^SAVE_PATH = "outputs\/demo\/stable-unclip\/"$/;"	v
+VERSION2SPECS	streamlit/stableunclip.py	/^VERSION2SPECS = {$/;"	v
+W	streamlit/stableunclip.py	/^        W = st.sidebar.number_input("W", value=VERSION2SPECS[version]["W"], min_value=64, max_value=2048)$/;"	v
+adm_cond	streamlit/stableunclip.py	/^                        adm_cond = repeat(adm_cond, '1 ... -> b ...', b=batch_size)$/;"	v
+adm_cond	streamlit/stableunclip.py	/^                adm_cond = torch.cat((c_adm, noise_level_emb), 1)$/;"	v
+adm_cond	streamlit/stableunclip.py	/^            adm_cond = karlo_prediction$/;"	v
+adm_cond	streamlit/stableunclip.py	/^        adm_cond = torch.stack(adm_inputs).sum(0) \/ sum(weights)$/;"	v
+adm_inputs	streamlit/stableunclip.py	/^        adm_inputs = list()$/;"	v
+adm_uc	streamlit/stableunclip.py	/^                            adm_uc = repeat(adm_uc, '1 ... -> b ...', b=batch_size)$/;"	v
+adm_uc	streamlit/stableunclip.py	/^                        adm_uc = adm_cond$/;"	v
+adm_uc	streamlit/stableunclip.py	/^            adm_uc = torch.zeros_like(adm_cond)$/;"	v
+all_samples	streamlit/stableunclip.py	/^            all_samples = list()$/;"	v
+base_count	streamlit/stableunclip.py	/^                    base_count = len(os.listdir(os.path.join(SAVE_PATH, "samples")))$/;"	v
+batch	gradio/depth2img.py	/^    batch = midas_trafo(batch)$/;"	v
+batch	gradio/depth2img.py	/^    batch = {$/;"	v
+batch	gradio/superresolution.py	/^    batch = {$/;"	v
+batch	streamlit/depth2img.py	/^    batch = midas_trafo(batch)$/;"	v
+batch	streamlit/depth2img.py	/^    batch = {$/;"	v
+batch	streamlit/superresolution.py	/^    batch = {$/;"	v
+batch_size	streamlit/stableunclip.py	/^                                                 batch_size=batch_size,$/;"	v
+batch_size	streamlit/stableunclip.py	/^    batch_size = n_samples$/;"	v
+block	gradio/depth2img.py	/^block = gr.Blocks().queue()$/;"	v
+block	gradio/inpainting.py	/^block = gr.Blocks().queue()$/;"	v
+block	gradio/superresolution.py	/^block = gr.Blocks().queue()$/;"	v
+bsz	streamlit/stableunclip.py	/^                    bsz=number_cols,$/;"	v
+c	streamlit/stableunclip.py	/^                        c = adm_cond$/;"	v
+c	streamlit/stableunclip.py	/^                        c = {"c_crossattn": [c], "c_adm": adm_cond}$/;"	v
+c	streamlit/stableunclip.py	/^                    c = model.get_learned_conditioning(prompts)$/;"	v
+callback	streamlit/stableunclip.py	/^                                                 callback=callback,$/;"	v
+chunk	img2img.py	/^def chunk(it, size):$/;"	f
+chunk	txt2img.py	/^def chunk(it, size):$/;"	f
+chunk	txt2img_interpolation.py	/^def chunk(it, size):$/;"	f
+conditioning	streamlit/stableunclip.py	/^                                                 conditioning=c,$/;"	v
+ddim_steps	gradio/depth2img.py	/^                ddim_steps = gr.Slider(label="Steps", minimum=1,$/;"	v
+ddim_steps	gradio/inpainting.py	/^                ddim_steps = gr.Slider(label="Steps", minimum=1,$/;"	v
+eta	gradio/depth2img.py	/^                eta = gr.Number(label="eta (DDIM)", value=0.0)$/;"	v
+eta	gradio/superresolution.py	/^                eta = gr.Number(label="eta (DDIM)",$/;"	v
+eta	streamlit/stableunclip.py	/^                                                 eta=ddim_eta,$/;"	v
+eta	streamlit/stableunclip.py	/^    eta = st.sidebar.number_input("eta (DDIM)", value=0., min_value=0., max_value=1.)$/;"	v
+f	streamlit/stableunclip.py	/^        f = VERSION2SPECS[version]["f"]$/;"	v
+force_full_precision	streamlit/stableunclip.py	/^    force_full_precision = st.sidebar.checkbox("Force FP32", False)  # TODO: check if\/where things break.$/;"	v
+gallery	gradio/depth2img.py	/^            gallery = gr.Gallery(label="Generated images", show_label=False).style($/;"	v
+gallery	gradio/inpainting.py	/^            gallery = gr.Gallery(label="Generated images", show_label=False).style($/;"	v
+gallery	gradio/superresolution.py	/^            gallery = gr.Gallery(label="Generated images", show_label=False).style($/;"	v
+get_init_img	streamlit/stableunclip.py	/^def get_init_img(batch_size=1, key=None):$/;"	f
+get_interactive_image	streamlit/stableunclip.py	/^def get_interactive_image(key=None):$/;"	f
+get_obj_from_str	streamlit/stableunclip.py	/^def get_obj_from_str(string, reload=False):$/;"	f
+grid	streamlit/stableunclip.py	/^                grid = rearrange(grid, 'n b c h w -> (n h) (b w) c')$/;"	v
+grid	streamlit/stableunclip.py	/^                grid = torch.stack(all_samples, 0)$/;"	v
+grid	streamlit/stableunclip.py	/^            grid = Image.fromarray((255. * grid.cpu().numpy()).astype(np.uint8))$/;"	v
+grid_count	streamlit/stableunclip.py	/^                grid_count = len(os.listdir(SAVE_PATH)) - 1$/;"	v
+image	gradio/depth2img.py	/^    image = np.array(image.convert("RGB"))$/;"	v
+image	gradio/depth2img.py	/^    image = torch.from_numpy(image).to(dtype=torch.float32) \/ 127.5 - 1.0$/;"	v
+image	gradio/superresolution.py	/^    image = np.array(image.convert("RGB"))$/;"	v
+image	gradio/superresolution.py	/^    image = torch.from_numpy(image).to(dtype=torch.float32) \/ 127.5 - 1.0$/;"	v
+image	streamlit/depth2img.py	/^    image = np.array(image.convert("RGB"))$/;"	v
+image	streamlit/depth2img.py	/^    image = torch.from_numpy(image).to(dtype=torch.float32) \/ 127.5 - 1.0$/;"	v
+image	streamlit/superresolution.py	/^    image = np.array(image.convert("RGB"))$/;"	v
+image	streamlit/superresolution.py	/^    image = torch.from_numpy(image).to(dtype=torch.float32) \/ 127.5 - 1.0$/;"	v
+init	streamlit/stableunclip.py	/^def init(version="Stable unCLIP-L", load_karlo_prior=False):$/;"	f
+initialize_model	gradio/depth2img.py	/^def initialize_model(config, ckpt):$/;"	f
+initialize_model	gradio/inpainting.py	/^def initialize_model(config, ckpt):$/;"	f
+initialize_model	gradio/superresolution.py	/^def initialize_model(config, ckpt):$/;"	f
+initialize_model	streamlit/depth2img.py	/^def initialize_model(config, ckpt):$/;"	f
+initialize_model	streamlit/inpainting.py	/^def initialize_model(config, ckpt):$/;"	f
+initialize_model	streamlit/superresolution.py	/^def initialize_model(config, ckpt):$/;"	f
+inpaint	gradio/inpainting.py	/^def inpaint(sampler, image, mask, prompt, seed, scale, ddim_steps, num_samples=1, w=512, h=512):$/;"	f
+inpaint	streamlit/inpainting.py	/^def inpaint(sampler, image, mask, prompt, seed, scale, ddim_steps, num_samples=1, w=512, h=512, eta=1.):$/;"	f
+input_image	gradio/depth2img.py	/^            input_image = gr.Image(source='upload', type="pil")$/;"	v
+input_image	gradio/inpainting.py	/^            input_image = gr.Image(source='upload', tool='sketch', type="pil")$/;"	v
+input_image	gradio/superresolution.py	/^            input_image = gr.Image(source='upload', type="pil")$/;"	v
+instantiate_from_config	streamlit/stableunclip.py	/^def instantiate_from_config(config):$/;"	f
+karlo_prediction	streamlit/stableunclip.py	/^            karlo_prediction = iter($/;"	v
+karlo_sampler	streamlit/stableunclip.py	/^        karlo_sampler = state["karlo_prior"]$/;"	v
+label	gradio/depth2img.py	/^                    label="Seed",$/;"	v
+label	gradio/inpainting.py	/^                    label="Seed",$/;"	v
+label	gradio/superresolution.py	/^                    label="Seed",$/;"	v
+load_img	img2img.py	/^def load_img(path):$/;"	f
+load_img	streamlit/stableunclip.py	/^def load_img(display=True, key=None):$/;"	f
+load_model_from_config	img2img.py	/^def load_model_from_config(config, ckpt, verbose=False):$/;"	f
+load_model_from_config	streamlit/stableunclip.py	/^def load_model_from_config(config, ckpt, verbose=False, vae_sd=None):$/;"	f
+load_model_from_config	txt2img.py	/^def load_model_from_config(config, ckpt, device=torch.device("cuda"), verbose=False):$/;"	f
+load_model_from_config	txt2img_interpolation.py	/^def load_model_from_config(config, ckpt, device=torch.device("cuda"), verbose=False):$/;"	f
+main	img2img.py	/^def main():$/;"	f
+main	txt2img.py	/^def main(opt):$/;"	f
+main	txt2img_interpolation.py	/^def main(opt):$/;"	f
+make_batch_sd	gradio/depth2img.py	/^def make_batch_sd($/;"	f
+make_batch_sd	gradio/inpainting.py	/^def make_batch_sd($/;"	f
+make_batch_sd	gradio/superresolution.py	/^def make_batch_sd($/;"	f
+make_batch_sd	streamlit/depth2img.py	/^def make_batch_sd($/;"	f
+make_batch_sd	streamlit/inpainting.py	/^def make_batch_sd($/;"	f
+make_batch_sd	streamlit/superresolution.py	/^def make_batch_sd($/;"	f
+make_conditionings_from_input	streamlit/stableunclip.py	/^        def make_conditionings_from_input(num=1, key=None):$/;"	f
+make_noise_augmentation	gradio/superresolution.py	/^def make_noise_augmentation(model, batch, noise_level=None):$/;"	f
+make_noise_augmentation	streamlit/superresolution.py	/^def make_noise_augmentation(model, batch, noise_level=None):$/;"	f
+make_oscillating_guidance_schedule	streamlit/stableunclip.py	/^def make_oscillating_guidance_schedule(num_steps, max_weight=15., min_weight=1.):$/;"	f
+maximum	gradio/depth2img.py	/^                    maximum=2147483647,$/;"	v
+maximum	gradio/inpainting.py	/^                    maximum=2147483647,$/;"	v
+maximum	gradio/superresolution.py	/^                    maximum=2147483647,$/;"	v
+midas_trafo	gradio/depth2img.py	/^    midas_trafo = AddMiDaS(model_type=model_type)$/;"	v
+midas_trafo	streamlit/depth2img.py	/^    midas_trafo = AddMiDaS(model_type=model_type)$/;"	v
+minimum	gradio/depth2img.py	/^                    minimum=0,$/;"	v
+minimum	gradio/inpainting.py	/^                    minimum=0,$/;"	v
+minimum	gradio/superresolution.py	/^                    minimum=0,$/;"	v
+mode	streamlit/stableunclip.py	/^    mode = "txt2img"$/;"	v
+negative_prompt	streamlit/stableunclip.py	/^    negative_prompt = st.text_input("Negative Prompt", "")$/;"	v
+noise_level	gradio/superresolution.py	/^                    noise_level = gr.Number($/;"	v
+noise_level	gradio/superresolution.py	/^                noise_level = None$/;"	v
+noise_level	streamlit/stableunclip.py	/^            noise_level = st.number_input("Noise Augmentation for CLIP embeddings", min_value=0,$/;"	v
+noise_level	streamlit/stableunclip.py	/^        noise_level = None$/;"	v
+num_inputs	streamlit/stableunclip.py	/^        num_inputs = st.number_input("Number of Input Images", 1)$/;"	v
+num_samples	gradio/depth2img.py	/^                num_samples = gr.Slider($/;"	v
+num_samples	gradio/inpainting.py	/^                num_samples = gr.Slider($/;"	v
+num_samples	gradio/superresolution.py	/^                num_samples = gr.Slider($/;"	v
+number_cols	streamlit/stableunclip.py	/^    number_cols = st.number_input("num cols", value=2, min_value=1, max_value=10)$/;"	v
+number_rows	streamlit/stableunclip.py	/^    number_rows = st.number_input("num rows", value=2, min_value=1, max_value=10)$/;"	v
+opt	txt2img.py	/^    opt = parse_args()$/;"	v
+opt	txt2img_interpolation.py	/^    opt = parse_args()$/;"	v
+outputs	streamlit/stableunclip.py	/^    outputs = st.empty()$/;"	v
+pad_image	gradio/depth2img.py	/^def pad_image(input_image):$/;"	f
+pad_image	gradio/inpainting.py	/^def pad_image(input_image):$/;"	f
+pad_image	gradio/superresolution.py	/^def pad_image(input_image):$/;"	f
+paint	gradio/depth2img.py	/^def paint(sampler, image, prompt, t_enc, seed, scale, num_samples=1, callback=None,$/;"	f
+paint	gradio/superresolution.py	/^def paint(sampler, image, prompt, seed, scale, h, w, steps, num_samples=1, callback=None, eta=0., noise_level=None):$/;"	f
+paint	streamlit/depth2img.py	/^def paint(sampler, image, prompt, t_enc, seed, scale, num_samples=1, callback=None,$/;"	f
+paint	streamlit/superresolution.py	/^def paint(sampler, image, prompt, seed, scale, h, w, steps, num_samples=1, callback=None, eta=0., noise_level=None):$/;"	f
+parse_args	txt2img.py	/^def parse_args():$/;"	f
+parse_args	txt2img_interpolation.py	/^def parse_args():$/;"	f
+precision_scope	streamlit/stableunclip.py	/^    precision_scope = autocast if not use_full_precision else nullcontext$/;"	v
+predict	gradio/depth2img.py	/^def predict(input_image, prompt, steps, num_samples, scale, seed, eta, strength):$/;"	f
+predict	gradio/inpainting.py	/^def predict(input_image, prompt, ddim_steps, num_samples, scale, seed):$/;"	f
+predict	gradio/superresolution.py	/^def predict(input_image, prompt, steps, num_samples, scale, seed, eta, noise_level):$/;"	f
+progressive_mode	streamlit/stableunclip.py	/^                    progressive_mode="final",$/;"	v
+prompt	gradio/depth2img.py	/^            prompt = gr.Textbox(label="Prompt")$/;"	v
+prompt	gradio/inpainting.py	/^            prompt = gr.Textbox(label="Prompt")$/;"	v
+prompt	gradio/superresolution.py	/^            prompt = gr.Textbox(label="Prompt")$/;"	v
+prompt	streamlit/stableunclip.py	/^                    prompt=prompt,$/;"	v
+prompt	streamlit/stableunclip.py	/^        prompt = [prompt]$/;"	v
+prompt	streamlit/stableunclip.py	/^    prompt = st.text_input("Prompt", "a professional photograph")$/;"	v
+prompts	streamlit/stableunclip.py	/^                        prompts = list(prompts)$/;"	v
+prompts	streamlit/stableunclip.py	/^    prompts = batch_size * prompt$/;"	v
+put_watermark	gradio/inpainting.py	/^def put_watermark(img, wm_encoder=None):$/;"	f
+put_watermark	streamlit/inpainting.py	/^def put_watermark(img, wm_encoder=None):$/;"	f
+put_watermark	txt2img.py	/^def put_watermark(img, wm_encoder=None):$/;"	f
+put_watermark	txt2img_interpolation.py	/^def put_watermark(img, wm_encoder=None):$/;"	f
+randomize	gradio/depth2img.py	/^                    randomize=True,$/;"	v
+randomize	gradio/inpainting.py	/^                    randomize=True,$/;"	v
+randomize	gradio/superresolution.py	/^                    randomize=True,$/;"	v
+result	streamlit/stableunclip.py	/^        result = st.empty()$/;"	v
+run	streamlit/depth2img.py	/^def run():$/;"	f
+run	streamlit/inpainting.py	/^def run():$/;"	f
+run	streamlit/superresolution.py	/^def run():$/;"	f
+run_button	gradio/depth2img.py	/^            run_button = gr.Button(label="Run")$/;"	v
+run_button	gradio/inpainting.py	/^            run_button = gr.Button(label="Run")$/;"	v
+run_button	gradio/superresolution.py	/^            run_button = gr.Button(label="Run")$/;"	v
+sample	streamlit/stableunclip.py	/^def sample($/;"	f
+sampler	gradio/depth2img.py	/^sampler = initialize_model(sys.argv[1], sys.argv[2])$/;"	v
+sampler	gradio/inpainting.py	/^sampler = initialize_model(sys.argv[1], sys.argv[2])$/;"	v
+sampler	gradio/superresolution.py	/^sampler = initialize_model(sys.argv[1], sys.argv[2])$/;"	v
+sampler	streamlit/stableunclip.py	/^            sampler = DDIMSampler(state["model"])$/;"	v
+sampler	streamlit/stableunclip.py	/^            sampler = DPMSolverSampler(state["model"])$/;"	v
+sampler	streamlit/stableunclip.py	/^    sampler = st.sidebar.selectbox("Sampler", ["DDIM", "DPM"], 0)$/;"	v
+scale	gradio/depth2img.py	/^                scale = gr.Slider($/;"	v
+scale	gradio/inpainting.py	/^                scale = gr.Slider($/;"	v
+scale	gradio/superresolution.py	/^                scale = gr.Slider($/;"	v
+scale	streamlit/stableunclip.py	/^    scale = st.number_input("cfg-scale", value=10., min_value=-100., max_value=100.)$/;"	v
+seed	gradio/depth2img.py	/^                seed = gr.Slider($/;"	v
+seed	gradio/inpainting.py	/^                seed = gr.Slider($/;"	v
+seed	gradio/superresolution.py	/^                seed = gr.Slider($/;"	v
+seed	streamlit/stableunclip.py	/^    seed = st.sidebar.number_input("seed", value=42, min_value=0, max_value=int(1e9))$/;"	v
+shape	streamlit/stableunclip.py	/^                                                 shape=shape,$/;"	v
+shape	streamlit/stableunclip.py	/^                shape = [C, H \/\/ f, W \/\/ f]$/;"	v
+state	streamlit/stableunclip.py	/^    state = init(version=version, load_karlo_prior=use_karlo_prior)$/;"	v
+step	gradio/depth2img.py	/^                    step=1,$/;"	v
+step	gradio/inpainting.py	/^                    step=1,$/;"	v
+step	gradio/superresolution.py	/^                    step=1,$/;"	v
+steps	gradio/superresolution.py	/^                steps = gr.Slider(label="DDIM Steps", minimum=2,$/;"	v
+steps	streamlit/stableunclip.py	/^    steps = st.sidebar.number_input("steps", value=20, min_value=1, max_value=1000)$/;"	v
+strength	gradio/depth2img.py	/^                strength = gr.Slider($/;"	v
+t_callback	streamlit/depth2img.py	/^        def t_callback(t):$/;"	f	function:run
+t_callback	streamlit/stableunclip.py	/^        def t_callback(t):$/;"	f
+t_callback	streamlit/superresolution.py	/^        def t_callback(t):$/;"	f	function:run
+t_progress	streamlit/stableunclip.py	/^        t_progress = st.progress(0)$/;"	v
+testit	tests/test_watermark.py	/^def testit(img_path):$/;"	f
+torch2np	streamlit/stableunclip.py	/^def torch2np(x):$/;"	f
+uc	streamlit/stableunclip.py	/^                        uc = adm_uc$/;"	v
+uc	streamlit/stableunclip.py	/^                        uc = model.get_learned_conditioning(batch_size * [negative_prompt])$/;"	v
+uc	streamlit/stableunclip.py	/^                        uc = {"c_crossattn": [uc], "c_adm": adm_uc}$/;"	v
+uc	streamlit/stableunclip.py	/^                    uc = None$/;"	v
+ucg_schedule	streamlit/stableunclip.py	/^                                                 ucg_schedule=ucg_schedule$/;"	v
+ucg_schedule	streamlit/stableunclip.py	/^    ucg_schedule = None$/;"	v
+unconditional_conditioning	streamlit/stableunclip.py	/^                                                 unconditional_conditioning=uc,$/;"	v
+unconditional_guidance_scale	streamlit/stableunclip.py	/^                                                 unconditional_guidance_scale=scale,$/;"	v
+use_karlo_prior	streamlit/stableunclip.py	/^    use_karlo_prior = version in ["Stable unCLIP-L"] and st.checkbox("Use KARLO prior", False)$/;"	v
+verbose	streamlit/stableunclip.py	/^                                                 verbose=False,$/;"	v
+version	streamlit/stableunclip.py	/^    version = st.selectbox("Model Version", list(VERSION2SPECS.keys()), 0)$/;"	v
+weights	streamlit/stableunclip.py	/^        weights = list()$/;"	v
+x_T	streamlit/stableunclip.py	/^                                                 x_T=None,$/;"	v
+x_sample	streamlit/stableunclip.py	/^                        x_sample = 255. * rearrange(x_sample.cpu().numpy(), 'c h w -> h w c')$/;"	v
+x_samples	streamlit/stableunclip.py	/^                x_samples = model.decode_first_stage(samples_ddim)$/;"	v
+x_samples	streamlit/stableunclip.py	/^                x_samples = torch.clamp((x_samples + 1.0) \/ 2.0, min=0.0, max=1.0)$/;"	v
