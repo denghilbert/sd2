@@ -209,8 +209,32 @@ class FrozenOpenCLIPEmbedder(AbstractEncoder):
             param.requires_grad = False
 
     def forward(self, text):
+        print(text)
         tokens = open_clip.tokenize(text)
+        #import pdb; pdb.set_trace()
+        """Try to mask (maybe wrong test)"""
+        #tmp = self.encode_with_transformer(tokens.to(self.device))
+        #if tokens[0, 2] == 1579:
+        #    tokens[:, 2]=0
         z = self.encode_with_transformer(tokens.to(self.device))
+
+        """Try to clip or swap the clip feature"""
+        #z = torch.cat((z[:,:1,:], z[:, 2:3,:], z[:, 1:2,:], z[:, 3:,:]), dim=1) # swap sos, white, a, cat, eos
+        #z = torch.cat((z[:, 0:1,:], z[:, 3:4,:], z[:, 2:3,:], z[:, 1:2,:], z[:, 4:,:]), dim=1) # swap, sos, cat, white, a, eos
+        #z = torch.cat((z[:, 1:4,:], z[:, 0:1,:], z[:, 4:,:]), dim=1) # swap, a, white, cat, sos, eos
+        #z = torch.cat((z[:, 1:3,:], z[:, 0:1,:], z[:, 3:4, :], z[:, 4:,:]), dim=1) # swap, a, white, sos, cat, eos
+
+        white_string = ['a white cat' for i in range(4)]
+        white_tokens = open_clip.tokenize(white_string)
+        white_z = self.encode_with_transformer(white_tokens.to(self.device))
+        #z = torch.cat((white_z[:,2:3,:], z[:, :,:]), dim=1) # white, sos, a cat, eos
+        #z = torch.cat((z[:, 0:1,:], white_z[:,2:3,:], z[:, 1:,:]), dim=1) # sos, white, a cat, eos
+        #z = torch.cat((white_z[:,1:4,:], z[:, :,:]), dim=1) # a, white, cat, sos, a cat, eos
+        #z = torch.cat((white_z[:,1:5,:], z[:, :,:]), dim=1) # a, white, cat, eos, sos, a cat, eos
+        #z = torch.cat((z[:, 0:1,:], white_z[:,1:4,:], z[:, 1:,:]), dim=1) # sos, a, white, cat, a cat, eos
+        #z = torch.cat((z[:, 0:1,:], white_z[:,1:4,:], z[:, 1:,:]), dim=1) # sos, a, white, cat, a cat, eos
+
+        #import pdb; pdb.set_trace()
         return z
 
     def encode_with_transformer(self, text):
